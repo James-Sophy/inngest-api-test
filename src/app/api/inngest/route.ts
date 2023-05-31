@@ -4,4 +4,6 @@ import { helloWorld } from "../../../inngest/functions";
 
 export const { GET, POST, PUT } = serve(inngest, [
   helloWorld, // <-- This is where you'll always add your new functions
-]);
+], {
+  serveHost: process.env.SERVER_HOST
+});
